@@ -11,6 +11,7 @@ import { HorariosComponent } from './horarios/horarios.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { LoginComponent } from './login/login.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { DiariosComponent } from './diarios/diarios.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     InfoContratoComponent,
     HorariosComponent,
     PerfilComponent,
-    LoginComponent
+    LoginComponent,
+    DiariosComponent
   ],
   imports: [
     BrowserModule,
