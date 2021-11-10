@@ -1,0 +1,178 @@
+*{
+    padding :1;
+    margin: 1;
+    }
+
+    #miTabla{
+       border-collapse: collapse;
+    }
+
+    .empleados{
+        width:100%;
+        height: 650px; 
+         
+    }
+
+    .tabla-Empleados{
+        margin: 0.2cm;
+        padding: 0.2cm;
+        border: 0.2cm;
+        border-bottom: 1px;
+        border-bottom-left-radius: 1px;
+        border-bottom-style:solid ; 
+        border-bottom-color: rgb(211, 208, 208);
+        border-top-color: rgb(211, 208, 208);
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-right-color: rgb(211, 208, 208);
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-left-color: rgb(211, 208, 208);
+        border-left-style: solid;
+        border-left-width: 1px;
+    }
+    .botonB{
+        margin: 0.2cm;
+        padding: 0.2cm;
+        border: 0.2cm;
+    justify-content:center;
+    border-bottom: 1px;
+    border-bottom-left-radius: 1px;
+    border-bottom-style:solid ; 
+    border-bottom-color: rgb(211, 208, 208);
+    border-top-color: rgb(211, 208, 208);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(211, 208, 208);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-left-color: rgb(211, 208, 208);
+    border-left-style: solid;
+    border-left-width: 1px;
+    }
+
+    .logo{
+        border-radius: 2px;
+        margin: 5px;
+        padding: 5px;
+        justify-content:center;
+    }
+
+    .encabezado {
+        margin: 0.2cm;
+        padding: 0.2cm;
+        border: 0.2cm;
+        justify-content:center;
+        width:96.5%; 
+        border-bottom: 1px;
+        border-bottom-left-radius: 1px;
+        border-bottom-style:solid ; 
+        border-bottom-color: rgb(211, 208, 208);
+        border-top-color: rgb(211, 208, 208);
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-right-color: rgb(211, 208, 208);
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-left-color: rgb(211, 208, 208);
+        border-left-style: solid;
+        border-left-width: 1px;
+    }
+
+    .cuerpo{
+        margin: 0.2cm;
+        padding: 0.2cm;
+        border: 0.2cm;
+        border-bottom: 1px;
+        border-bottom-left-radius: 1px;
+        border-bottom-style:solid ; 
+        border-bottom-color: rgb(211, 208, 208);
+        border-top-color: rgb(211, 208, 208);
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-right-color: rgb(211, 208, 208);
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-left-color: rgb(211, 208, 208);
+        border-left-style: solid;
+        border-left-width: 1px;
+    }
+    .n{
+        justify-content:center;
+        text-align: center;
+        width: 100%;
+        background-color: darkred;
+    }
+
+    body{
+        padding: 3%;
+        margin: 1%;
+        margin-left: 20%;
+        height: 550px; 
+        border-bottom: 1px;
+        border-bottom-left-radius: 1px;
+        border-bottom-style:solid ; 
+        border-bottom-color: rgb(211, 208, 208);
+        border-top-color: rgb(211, 208, 208);
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-right-color: rgb(211, 208, 208);
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-left-color: rgb(211, 208, 208);
+        border-left-style: solid;
+        border-left-width: 1px;
+    }
+
+    .edit{
+        color: blue;
+    }
+    .edit:hover{
+        color:#06976070; ;
+    }
+
+    .botonSelecionar{
+        background-color: rgb(222, 222, 245);
+        margin: 0.5%;
+        padding: 0.5%;
+    }
+    
+    .botonBuscar{
+        margin: 0.5%;
+        padding: 0.5%;
+        background-color: rgb(222, 222, 245);
+    }
+    .bbuscar{
+        width: 50%;
+    }
+    .bcrear{
+        width: 50%;
+    }
+
+    .cedula{
+        margin: 0.5%;
+        padding: 0.5%;
+    }
+
+    .nombre{
+        margin: 0.5%;
+        padding: 0.5%;
+    }
+    
+    .botonCrear{
+        margin: 0.5%;
+        padding: 0.5%;
+        background-color: rgb(222, 222, 245);
+    }
+    
+    .botonSelecionar:hover{
+        background-color: #06976070 ;
+    }
+    
+    .botonBuscar:hover{
+        background-color:#06976070; ;
+    }
+
+    .botonCrear:hover{
+        background-color: #06976070 ;
+    }

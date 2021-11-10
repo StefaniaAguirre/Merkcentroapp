@@ -1,1 +1,66 @@
-<p>lista-empleados works!</p>
+<section class="empleados">
+    <html>
+
+    <body>
+        <div class="cuerpo">
+            <div class="encabezado">
+                <img class="logo" src="assets/merkcentro.PNG">
+            </div>
+            <div class="botonB">
+                <div class="bbuscar">
+                    <input type="text" class="cedula" placeholder="Ingrese la cedula">
+                    <button class="botonBuscar"> Buscar Empleado </button>
+                </div>
+                <div class="bcrear">
+                    <input type="text" class="nombre" placeholder="Ingrese el nombre">
+                    <button class="botonCrear">Buscar Empleado</button>
+                </div>
+                
+            </div>
+
+            <div class="tabla-Empleados">
+                <ng-container *ngIf=""></ng-container>
+                <h1 class="text-left txt-primary"> Listas de empleado </h1>
+                <meta charset="utf-8">
+                <title>Empleados </title>
+                <table border="1" width="100%" id="miTabla">
+                    <tr>
+                        <th> Nombre Empleado </th>
+                        <th>Direccion</th>
+                        <th>Correo</th>
+                        <th>Celular</th>
+                        <th>Selecionar</th>
+                    </tr>
+
+                    <tr>
+                        <td>stiven</td>
+                        <td>barcelona quindio</td>
+                        <td>stiven@gmail.com</td>
+                        <td>32163864</td>
+                        <th>
+                            <nav>
+                                <a href="" class="edit">Seleccionar</a>
+                            </nav>
+                            <!-- <button mat-icon-button>
+                                                <mat-icon 
+                                                        class="lapiz" 
+                                                        [routerLink]="['./', inventory.id]" 
+                                                        routerLinkActive="active" 
+                                                        [svgIcon]= "'heroicons_outline:pencil'">
+                                                </mat-icon>
+                                            </button> -->
+                        </th>
+
+                    </tr>
+                </table>
+                <div >
+                    <button class="boton">Crear</button>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+
+    </html>
+</section>
