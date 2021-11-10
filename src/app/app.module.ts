@@ -12,7 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DiariosComponent } from './diarios/diarios.component';
 import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
-import { appRoutes } from './app-routing.module';
+// import { appRoutes } from './app-routing.module';
 
 const routerConfig: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -35,7 +35,7 @@ const routerConfig: ExtraOptions = {
   imports: [
     BrowserModule,
     MatToolbarModule,
-    RouterModule.forRoot(appRoutes, routerConfig),
+    // RouterModule.forRoot(appRoutes, routerConfig),
 
   ],
   providers: [],
