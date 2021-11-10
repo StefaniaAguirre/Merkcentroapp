@@ -1,0 +1,57 @@
+.input-group{
+    margin: 5px;
+}
+.checkbox-fade{
+    margin: 5px;
+}
+.col-sm-5{
+    margin: 5px;
+}
+.logo{
+    border-radius: 2px;
+    margin: 5px;
+    padding: 5px;
+
+}
+.encabezado {
+    margin: 0.2cm;
+    padding: 0.2cm;
+    border: 0.2cm;
+
+}
+.auth-box {
+    background-color: #FFF;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    align-items: center; 
+    text-align: center;
+    border-color: #006D44; 
+}
+
+.auth-box h3 {
+    color: #006D44;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.auth-box .input-group {
+    margin-bottom: 0;
+}
+.auth-fluid{
+    padding: 5px;
+    margin: 5px;
+}
+.login {
+    padding: 5px;
+    margin: 2px;
+    align-items: center;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color:#F8981D;
+}
+.auth-box .linea{
+    background-color: #006D44;  
+}
