@@ -3,9 +3,6 @@
 
     <body>
         <div class="cuerpo">
-            <div class="encabezado">
-                <img class="logo" src="assets/images/merkcentro.PNG">
-            </div>
             <div class="botonB">
                 <div class="bbuscar">
                     <input type="text" class="cedula" placeholder="Ingrese la cedula">
@@ -31,15 +28,15 @@
                         <th>Celular</th>
                         <th>Selecionar</th>
                     </tr>
-
+                    <ng-container *ngFor="let empleados of this.listEmpleados">
                     <tr>
-                        <td>stiven</td>
+                        <td>{{ empleados.name }}</td>
                         <td>barcelona quindio</td>
-                        <td>stiven@gmail.com</td>
-                        <td>32163864</td>
+                        <td>{{ empleados.email }}</td>
+                        <td>{{ empleados.telefono }}</td>
                         <th>
                             <nav>
-                                <a href="" class="edit">Seleccionar</a>
+                                <a [routerLink]="['']" routerLinkActive="active" class="edit" >Seleccionar</a>
                             </nav>
                             <!-- <button mat-icon-button>
                                                 <mat-icon 
@@ -48,13 +45,15 @@
                                                         routerLinkActive="active" 
                                                         [svgIcon]= "'heroicons_outline:pencil'">
                                                 </mat-icon>
-                                            </button> -->
+                            </button> -->
                         </th>
 
                     </tr>
+                </ng-container>
                 </table>
                 <div >
-                    <button class="boton">Crear</button>
+                    <button class="boton"
+                    [routerLink]="['/info']" routerLinkActive="active" >Crear</button>
                 </div>
             </div>
         </div>
@@ -65,6 +64,4 @@
     </html>
 </section>
 <div id="empleados">
-
-    <p>lista-empleados works!</p>
 </div>
