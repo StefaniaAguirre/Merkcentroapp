@@ -8,6 +8,7 @@ import { ListaEmpleadosComponent } from './Empleados/lista-empleados/lista-emple
 import { HorariosComponent } from './horarios/horarios.component';
 import { LoginComponent } from './login/login.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { ProfilesComponent } from './profiles/profiles.component';
 
 const routes: Routes = [
       // //ruta inicial a login
@@ -20,6 +21,7 @@ const routes: Routes = [
       { path: 'permisos', component: InfoPermisosComponent},
       { path: 'contrato', component: InfoContratoComponent},
       { path: 'compose', component: ComposeComponent},
+      { path: 'profile' , component: ProfilesComponent},
       { path: '**', redirectTo: 'login'}
       // { path: 'empleados', component: ListaEmpleadosComponent, children: [
       //   { path: 'info', component: InfoPersonalComponent},
