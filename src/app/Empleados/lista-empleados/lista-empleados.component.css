@@ -13,11 +13,24 @@
     #miTabla{
        border-collapse: collapse;
     }
+    .titulo1{
+        max-width: 50%;
+        width: 50%;
+    }
 
     .empleados{
         width:100%;
         height: 650px; 
          
+    }
+    .per{
+        border-bottom: 1px;
+        border-bottom-left-radius: 1px;
+        border-bottom-style:solid ; 
+        border-bottom-color: rgb(0, 0, 0);
+        border-top-color: rgb(0, 0, 0);
+        border-top-style: solid;
+
     }
 
     .tabla-Empleados{
@@ -59,7 +72,7 @@
     }
 
     .logo{
-        border-radius: 2px;
+        border-radius: 90px;
         margin: 5px;
         padding: 5px;
         justify-content:center;
@@ -109,6 +122,55 @@
         text-align: center;
         width: 100%;
         background-color: darkred;
+    }
+
+    .gEmpleados{
+        margin: 0.2cm;
+        padding: 0.2cm;
+        border: 0.2cm;        
+        border-bottom: 1px;
+        border-bottom-left-radius: 1px;
+        border-bottom-style:solid ; 
+        border-bottom-color: rgb(0, 0, 0);
+    }
+    .gHorarios{
+        margin: 0.2cm;
+        padding: 0.2cm;
+        border: 0.2cm;
+        border-bottom: 1px;
+        border-bottom-left-radius: 1px;
+        border-bottom-style:solid ; 
+        border-bottom-color: rgb(0, 0, 0);
+    }
+    .gPerfil{
+        margin: 0.2cm;
+        padding: 0.2cm;
+        border: 0.2cm;
+        border-bottom: 1px;
+        border-bottom-left-radius: 1px;
+        border-bottom-style:solid ; 
+        border-bottom-color: rgb(0, 0, 0);
+    }
+    .contene{
+        width: 15%;
+        height: 550px; 
+        border-bottom: 1px;
+        border-bottom-left-radius: 1px;
+        border-bottom-style:solid ; 
+        border-bottom-color: rgb(211, 208, 208);
+        border-top-color: rgb(211, 208, 208);
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-right-color: rgb(211, 208, 208);
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-left-color: rgb(211, 208, 208);
+        border-left-style: solid;
+        border-left-width: 1px;
+    }
+    .logo{
+        max-width: 80%;
+        width: 80%;
     }
 
     body{

@@ -13,6 +13,7 @@ import { DiariosComponent } from './diarios/diarios.component';
 import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ProfilesComponent } from './profiles/profiles.component';
 import { ComposeComponent } from './Empleados/crearEmpleado/compose.component';
 // import { MatFormFieldModule } from '@angular/material/form-field';
 
@@ -34,6 +35,7 @@ const routerConfig: ExtraOptions = {
     LoginComponent,
     DiariosComponent,
     ComposeComponent,
+    ProfilesComponent,
     
   ],
   imports: [
