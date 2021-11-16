@@ -1,8 +1,15 @@
-*{
+    svg#icono-tabla{
+        width:30px;
+        height: 20px;
+        color:#006D44;
+    }
+
+    *{
     padding :1;
     margin: 1;
     }
 
+  
     #miTabla{
        border-collapse: collapse;
     }
@@ -144,6 +151,9 @@
     }
     .bbuscar{
         width: 50%;
+    }
+    .cuerpo .botonB .bbuscar #buscador{
+        width:70%;
     }
     .bcrear{
         width: 50%;

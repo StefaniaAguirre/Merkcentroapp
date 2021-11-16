@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ComposeComponent } from './Empleados/crearEmpleado/compose.component';
 import { InfoContratoComponent } from './Empleados/info-contrato/info-contrato.component';
 import { InfoPermisosComponent } from './Empleados/info-permisos/info-permisos.component';
 import { InfoPersonalComponent } from './Empleados/info-personal/info-personal.component';
@@ -18,7 +19,12 @@ const routes: Routes = [
       { path: 'info', component: InfoPersonalComponent},
       { path: 'permisos', component: InfoPermisosComponent},
       { path: 'contrato', component: InfoContratoComponent},
-      { path: '**', redirectTo: 'login'},
+      { path: 'compose', component: ComposeComponent},
+      { path: '**', redirectTo: 'login'}
+      // { path: 'empleados', component: ListaEmpleadosComponent, children: [
+      //   { path: 'info', component: InfoPersonalComponent},
+      //   { path: 'permisos', component: InfoPermisosComponent},
+      //   { path: ':contrato', component: InfoContratoComponent}]},
       
 ];
 

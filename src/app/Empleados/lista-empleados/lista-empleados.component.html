@@ -5,14 +5,9 @@
         <div class="cuerpo">
             <div class="botonB">
                 <div class="bbuscar">
-                    <input type="text" class="cedula" placeholder="Ingrese la cedula">
+                    <input id="buscador" type="text" class="cedula" placeholder="Ingrese la cedula o el nombre">
                     <button class="botonBuscar"> Buscar Empleado </button>
-                </div>
-                <div class="bcrear">
-                    <input type="text" class="nombre" placeholder="Ingrese el nombre">
-                    <button class="botonCrear">Buscar Empleado</button>
-                </div>
-                
+                </div>                
             </div>
 
             <div class="tabla-Empleados">
@@ -23,7 +18,7 @@
                 <table border="1" width="100%" id="miTabla">
                     <tr>
                         <th> Nombre Empleado </th>
-                        <th>Direccion</th>
+                        <th>codigo</th>
                         <th>Correo</th>
                         <th>Celular</th>
                         <th>Selecionar</th>
@@ -31,21 +26,16 @@
                     <ng-container *ngFor="let empleados of this.listEmpleados">
                     <tr>
                         <td>{{ empleados.name }}</td>
-                        <td>barcelona quindio</td>
+                        <td>{{ empleados.id }}</td>
                         <td>{{ empleados.email }}</td>
                         <td>{{ empleados.telefono }}</td>
                         <th>
-                            <nav>
-                                <a [routerLink]="['']" routerLinkActive="active" class="edit" >Seleccionar</a>
-                            </nav>
-                            <!-- <button mat-icon-button>
-                                                <mat-icon 
-                                                        class="lapiz" 
-                                                        [routerLink]="['./', inventory.id]" 
-                                                        routerLinkActive="active" 
-                                                        [svgIcon]= "'heroicons_outline:pencil'">
-                                                </mat-icon>
-                            </button> -->
+                        <a [routerLink]="['/info']" class="edit" >
+                            <svg id="icono-tabla" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
+                            xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" 
+                            stroke-linejoin="round" stroke-width="2" 
+                            d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </a>
                         </th>
 
                     </tr>
@@ -53,7 +43,8 @@
                 </table>
                 <div >
                     <button class="boton"
-                    [routerLink]="['/info']" routerLinkActive="active" >Crear</button>
+                    [routerLink]="['/compose']" routerLinkActive="active" 
+                    >Crear</button>
                 </div>
             </div>
         </div>
