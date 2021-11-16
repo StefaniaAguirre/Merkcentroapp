@@ -1,9 +1,9 @@
 .cuerpo{
-    width: 70%;
-    height: 100%;
-    padding: 1.5%;
-    margin: 1.5%;
-    margin-left: 20%;
+    float: right;
+    margin: 0.2cm;
+    padding: 0.2cm;
+    border: 0.2cm;
+    width: 80%;
     border-bottom: 1px;
     border-bottom-left-radius: 1px;
     border-bottom-style:solid ; 
@@ -78,3 +78,96 @@
         display: flex;
         justify-content: center;
     }
+
+
+
+
+
+    
+.contene{
+    background-color:rgb(182, 178, 177);
+    width: 15%;
+    height: 630px; 
+    border-bottom: 1px;
+    border-bottom-left-radius: 1px;
+    border-bottom-style:solid ; 
+    border-bottom-color: rgb(211, 208, 208);
+    border-top-color: rgb(211, 208, 208);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(211, 208, 208);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-left-color: rgb(211, 208, 208);
+    border-left-style: solid;
+    border-left-width: 1px;
+  }
+  .titulo1{
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    color: rgb(230, 105, 3);
+  }
+  .titulo{
+    justify-content: center;
+    width: 100%;
+  
+  }
+  .per{
+    border-bottom: 1px;
+    border-bottom-left-radius: 1px;
+    border-bottom-style:solid ; 
+    border-bottom-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-top-style: solid;
+  
+  }
+  .logo{
+    border-radius: 90px;
+    margin: 5px;
+    padding: 5px;
+    justify-content:center;
+    max-width: 80%;
+    width: 80%;
+  }
+  .textPerfil{
+    color:  #006D44;
+  }
+  .textEmpleados{
+    color:  #006D44;
+  }
+  .textHorarios{
+    color:  #006D44;
+  }
+  
+  .gEmpleados{
+    margin: 0.2cm;
+    padding: 0.2cm;
+    border: 0.2cm;        
+    border-bottom: 1px;
+    border-bottom-left-radius: 1px;
+    border-bottom-style:solid ; 
+    border-bottom-color: rgb(0, 0, 0);
+  }
+  .gHorarios{
+    color:  #006D44;
+    margin: 0.2cm;
+    padding: 0.2cm;
+    border: 0.2cm;
+    border-bottom: 1px;
+    border-bottom-left-radius: 1px;
+    border-bottom-style:solid ; 
+    border-bottom-color: rgb(0, 0, 0);
+  }
+  .gPerfil{
+    color:  #006D44;
+    margin: 0.2cm;
+    padding: 0.2cm;
+    border: 0.2cm;
+    border-bottom: 1px;
+    border-bottom-left-radius: 1px;
+    border-bottom-style:solid ; 
+    border-bottom-color: rgb(0, 0, 0);
+  }
+  

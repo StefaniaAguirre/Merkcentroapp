@@ -1,9 +1,9 @@
 .cuerpo{
-    width: 70%;
-    height: 100%;
-    padding: 1.5%;
-    margin: 1.5%;
-    margin-left: 20%;
+    float: right;
+    margin: 0.2cm;
+    padding: 0.2cm;
+    border: 0.2cm;
+    width: 80%;
     border-bottom: 1px;
     border-bottom-left-radius: 1px;
     border-bottom-style:solid ; 
@@ -142,3 +142,8 @@ background-color: #a1a1a1;
 .botonDomingo:hover{
 background-color: #a1a1a1;
 }
+
+
+
+
+

@@ -10,7 +10,8 @@ svg#icono-tabla{
     justify-content: center;
 }
 .pant{
-    margin-left:19.8%;
+    float: right;
+    width: 80%;
     border-bottom: 1px;
     border-bottom-left-radius: 1px;
     border-bottom-style:solid ; 
@@ -194,3 +195,5 @@ svg#icono-tabla{
     height: 35px; 
      
 }
+
+

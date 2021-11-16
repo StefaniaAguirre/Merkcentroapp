@@ -14,7 +14,11 @@ svg#icono-tabla{
     align-items: center;
 }
 .pant{
-    margin-left:19.8%;
+    float: right;
+    margin: 0.2cm;
+    padding: 0.2cm;
+    border: 0.2cm;
+    width: 80%;
     border-bottom: 1px;
     border-bottom-left-radius: 1px;
     border-bottom-style:solid ; 

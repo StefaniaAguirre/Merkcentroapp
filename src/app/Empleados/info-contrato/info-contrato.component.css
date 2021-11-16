@@ -3,25 +3,7 @@
     max-width: 90%;
     width: 90%;
 }
-body{
-    padding: 3%;
-    margin: 1%;
-    margin-left: 20%;
-    height: 100%; 
-    border-bottom: 1px;
-    border-bottom-left-radius: 1px;
-    border-bottom-style:solid ; 
-    border-bottom-color: rgb(211, 208, 208);
-    border-top-color: rgb(211, 208, 208);
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-right-color: rgb(211, 208, 208);
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-left-color: rgb(211, 208, 208);
-    border-left-style: solid;
-    border-left-width: 1px;
-}
+
 
 .logo{
 
@@ -65,8 +47,11 @@ body{
     padding: 0.5%;
 }
 .info{
-    margin: 0.5%;
-    padding: 0.5%;
+    float: right;
+    margin: 0.2cm;
+    padding: 0.2cm;
+    border: 0.2cm;
+    width: 80%;
     border-bottom: 1px;
     border-bottom-left-radius: 1px;
     border-bottom-style:solid ; 

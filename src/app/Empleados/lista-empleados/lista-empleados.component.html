@@ -1,7 +1,11 @@
 <section class="empleados">
     <html>
-    <body>  
+    <body> 
+        <div class="general">
         <div class="cuerpo">
+            <div class="encabezado">
+                <img class="logo" src="assets/images/merkcentro.PNG">
+            </div>
             <div class="botonB">
                 <div class="bbuscar">
                     <input id="buscador" type="text" class="cedula" placeholder="Ingrese la cedula o el nombre">
@@ -42,10 +46,25 @@
                     <button class="boton"
                     [routerLink]="['/compose']" routerLinkActive="active" 
                     >Crear</button>
+                    <button class="boton"
+                    [routerLink]="['/contrato']" routerLinkActive="active" 
+                    >Contrato</button>
+                    <button class="boton"
+                    [routerLink]="['/permisos']" routerLinkActive="active" 
+                    >Permisos</button>
+                </div>
+                <div >
+                   
+                </div>
+                <div >
+                    
                 </div>
             </div>
+
         </div>
 
+        <app-profiles></app-profiles>
+    </div> 
 
     </body>
 
