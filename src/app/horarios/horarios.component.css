@@ -48,7 +48,7 @@
     border-left-color: rgb(211, 208, 208);
     border-left-style: solid;
     border-left-width: 1px;
-    background-color: #06976070;
+    background-color: #fff;
 }
 .titPag1{
     margin: 0px;
@@ -87,58 +87,58 @@
 
 
 .botonLunes{
-    background-color: #06976070;
+    background-color: #fff;
     }
 
 
 .botonLunes:hover{
-background-color: #F8981D;
+background-color: #a1a1a1;
 }
 .botonMartes{
-    background-color: #06976070   ;
+    background-color: #fff   ;
     }
 
 
 .botonMartes:hover{
-background-color: #F8981D;
+background-color: #a1a1a1;
 }
 .botonMiercoles{
-    background-color: #06976070   ;
+    background-color: #fff   ;
     }
 
 
 .botonMiercoles:hover{
-background-color: #F8981D;
+background-color: #a1a1a1;
 }
 .botonJueves{
-    background-color: #06976070   ;
+    background-color: #fff   ;
     }
 
 
 .botonJueves:hover{
-background-color: #F8981D;
+background-color: #a1a1a1;
 }
 .botonViernes{
-    background-color: #06976070   ;
+    background-color: #fff   ;
     }
 
 
 .botonViernes:hover{
-background-color: #F8981D;
+background-color: #a1a1a1;
 }
 .botonSabado{
-    background-color: #06976070   ;
+    background-color: #fff   ;
     }
 
 
 .botonSabado:hover{
-background-color: #F8981D;
+background-color: #a1a1a1;
 }
 .botonDomingo{
-    background-color: #06976070   ;
+    background-color: #fff   ;
     }
 
 
 .botonDomingo:hover{
-background-color: #F8981D;
+background-color: #a1a1a1;
 }
