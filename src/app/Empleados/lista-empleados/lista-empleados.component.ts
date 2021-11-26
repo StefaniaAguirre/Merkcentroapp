@@ -1,8 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, EventEmitter, OnInit } from '@angular/core';
 import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ComposeComponent } from '../crearEmpleado/compose.component';
+import { EmpleadosService } from '../empleados.service';
+import { Observable, Subject, switchMap, takeUntil } from 'rxjs';
+import { empleado } from '../empleados.types';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-lista-empleados',
@@ -11,21 +15,50 @@ import { ComposeComponent } from '../crearEmpleado/compose.component';
 })
 export class ListaEmpleadosComponent implements OnInit {
 
-  listEmpleados: any[] = [];
+  listEmpleados: empleado[] = [];
+  empleadoSeleccionado: empleado | null = null;
+  private _unsubscribeAll: Subject<any> = new Subject<any>();
+  empleados$: Observable<empleado[]> = new Observable<empleado[]>();
+  public page: number = 0;
+  searchInputControl: FormControl = new FormControl();
 
   constructor(
-  ) { }
+    private _empleadosService: EmpleadosService,
+    private _changeDetectorRef: ChangeDetectorRef,
+
+  ) {
+
+  }
 
   ngOnInit(): void {
 
-    this.listEmpleados = [
-      { name: "camilo", id: "099", email: "camilo@gmail.com", telefono: 3137838043 },
-      { name: "Juan", id: "098", email: "Juan@gmail.com", telefono: 3130988043 },
-      { name: "Pedro", id: "097", email: "Pedro@gmail.com", telefono: 3154137899 }];
+    this.empleados$ = this._empleadosService.empleados$;
+
+    //Empleado seleccionado
+    this._empleadosService.empleado$.subscribe(result => this.empleadoSeleccionado = result);
+
+    // Get the empleados
+    this._empleadosService.getEmpleados().pipe(takeUntil(this._unsubscribeAll)).subscribe(results => {
+      this.listEmpleados = results;
+    });
+
+    
+    console.log(this.searchInputControl.setValue);
+    this.searchInputControl.valueChanges
+      .pipe(
+        takeUntil(this._unsubscribeAll),
+        switchMap(query => 
+           this._empleadosService.searchEmpleados(query)
+        )).subscribe();
+
   }
 
+  buscarEmpleado(){
+
   
+        
+  }
+
+
+
 }
-
-
-

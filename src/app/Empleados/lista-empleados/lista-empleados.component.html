@@ -8,8 +8,9 @@
             </div>
             <div class="botonB">
                 <div class="bbuscar">
-                    <input id="buscador" type="text" class="cedula" placeholder="Ingrese la cedula o el nombre">
-                    <button class="botonBuscar"> Buscar Empleado </button>
+                    <input matInput [formControl]="searchInputControl"
+                    [placeholder]="'Buscar empleados'" [autocomplete]="'off'">
+                    <button class="botonBuscar" (click) = "buscarEmpleado()"> Buscar Empleado </button>
                 </div>                
             </div>
             <div class="tabla-Empleados">
@@ -19,17 +20,17 @@
                 <table border="1" width="100%" id="miTabla">
                     <tr>
                         <th> Nombre Empleado </th>
-                        <th>codigo</th>
-                        <th>Correo</th>
-                        <th>Celular</th>
+                        <th>Apellidos</th>
+                        <th>Identificacion</th>
+                        <th>Activo</th>
                         <th>Selecionar</th>
                     </tr>
-                    <ng-container *ngFor="let empleados of this.listEmpleados">
+                    <ng-container *ngFor="let empleados of this.listEmpleados | paginate: { itemsPerPage: 10, currentPage: page }">
                     <tr>
-                        <td>{{ empleados.name }}</td>
-                        <td>{{ empleados.id }}</td>
-                        <td>{{ empleados.email }}</td>
-                        <td>{{ empleados.telefono }}</td>
+                        <td>{{ empleados.nombre }}</td>
+                        <td>{{ empleados.apellidos }}</td>
+                        <td>{{ empleados.identificacion }}</td>
+                        <td>{{ empleados.activo }}</td>
                         <th>
                         <a [routerLink]="['/info']" class="edit" >
                             <svg id="icono-tabla" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
@@ -54,7 +55,8 @@
                     >Permisos</button>
                 </div>
                 <div >
-                   
+                    <pagination-controls (pageChange)="page = $event" previousLabel="Anterior"
+                    nextLabel="Siguiente"></pagination-controls >
                 </div>
                 <div >
                     
