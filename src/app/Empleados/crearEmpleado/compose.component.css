@@ -2,9 +2,13 @@
     width:20px;
     height: 20px;
 }
+*{
+    border-radius: 5px;
+    }
 svg#icono-tabla{
     width:40px;
     height: 30px;
+    color: green;
 }
 .pant .titulo h1{
     text-align: center;
@@ -13,12 +17,18 @@ svg#icono-tabla{
     
     align-items: center;
 }
+.empleados{
+    min-width: 1000px;
+}
+.logoM{
+    padding-left: 30%;   
+}
 .pant{
     float: right;
     margin: 0.2cm;
     padding: 0.2cm;
     border: 0.2cm;
-    width: 80%;
+    width: 78%;
     border-bottom: 1px;
     border-bottom-left-radius: 1px;
     border-bottom-style:solid ; 
@@ -78,6 +88,7 @@ svg#icono-tabla{
     margin: 2%;
     height:50% ;
     width: 50%;
+    margin-left: 20%;
     border-bottom-left-radius: 1px;
     border-bottom-style:solid ; 
     border-bottom-color: rgb(211, 208, 208);

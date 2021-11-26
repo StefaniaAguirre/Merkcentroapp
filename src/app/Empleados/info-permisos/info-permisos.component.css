@@ -1,34 +1,78 @@
 #miTabla{
     border-collapse: collapse;
+    width: 100%; 
  }
- .nombre1{
-     text-align: center;
-     height: 100%;
-     padding: 2%;
-     margin: 1%;
-
- }
-
+ *{
+    border-radius: 5px;     
+  }
+.tablaPermiso{
+    border-bottom: 1px;
+    border-bottom-left-radius: 1px;
+    padding: 0.5%;
+    margin: 0.5%;
+    width: 96%;
+    border-bottom-style:solid ; 
+    border-bottom-color: rgb(211, 208, 208);
+    border-top-color: rgb(211, 208, 208);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(211, 208, 208);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-left-color: rgb(211, 208, 208);
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+ svg#icono-tabla{
+    width:40px;
+    height: 30px;
+    color: green;
+}
     .boton{
-    padding: 2%;
-    margin: 2%;
-    height: 10%;
-    width: 30%;
+    padding: 0.5%;
+    margin: 1%;
+     height: 30px;
+     width: 15%;
     text-align: center;
     background-color: rgb(222, 222, 245);
+    margin-left: 45%;
     }
+    .boton1{
+        padding: 0.5%;
+        margin: 1%;
+         height: 30px;
+         width: 15%;
+        text-align: center;
+        background-color: rgb(222, 222, 245);
+        margin-left: 45%;
+        }
     .boton:hover{
         background-color: #06976070 ;
     }
-.logo{
-    border-radius: 2px;
-    margin: 5px;
-    padding: 5px;
-    justify-content:center;
-}
+    .boton1:hover{
+        background-color: #06976070 ;
+    }
+    .logoM{
+        padding-left: 30%;   
+    }
 
 #miTablaC{
     border-collapse: collapse;
+}
+.compensatorios{
+    width: 96%;
+    padding: 0.5%;
+    border-bottom-style:solid ; 
+    border-bottom-color: rgb(211, 208, 208);
+    border-top-color: rgb(211, 208, 208);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(211, 208, 208);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-left-color: rgb(211, 208, 208);
+    border-left-style: solid;
+    border-left-width: 1px;
 }
 
 .encabezado{
@@ -36,14 +80,28 @@
     padding: 0.2cm;
     border: 0.2cm;
     justify-content:center;
-
+    border-bottom-style:solid ; 
+    border-bottom-color: rgb(211, 208, 208);
+    border-top-color: rgb(211, 208, 208);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(211, 208, 208);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-left-color: rgb(211, 208, 208);
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+.empleados{
+    min-width: 940px;
+    width: 100%;
 }
 .info{
     float: right;
         margin: 0.2cm;
         padding: 0.2cm;
         border: 0.2cm;
-        width: 80%;
+        width: 78%;
     border-bottom-left-radius: 1px;
     border-bottom-style:solid ; 
     border-bottom-color: rgb(211, 208, 208);
@@ -121,6 +179,9 @@
 }
 .n8{
     padding-left:40% ;
+}
+.nombre{
+ text-align: center;
 }
 .lnombre{
     margin-left:22px ;

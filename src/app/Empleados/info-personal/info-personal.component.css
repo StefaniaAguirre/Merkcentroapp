@@ -2,9 +2,19 @@
     width:20px;
     height: 20px;
 }
+
+
 svg#icono-tabla{
     width:40px;
     height: 30px;
+    color: green;
+}
+.empleados{
+    min-width: 750px;
+    min-width: 850px;
+}
+.infoP{
+    text-align: center;
 }
 .h1{
     justify-content: center;
@@ -40,11 +50,8 @@ svg#icono-tabla{
     .boton:hover{
         background-color: #06976070 ;
     }
-.logo{
-    border-radius: 2px;
-    margin: 5px;
-    padding: 5px;
-    justify-content:center;
+.logoM{
+    padding-left: 30%;   
 }
 
 .encabezado{
@@ -72,6 +79,7 @@ svg#icono-tabla{
     margin: 2%;
     height:50% ;
     width: 50%;
+    margin-left: 20%;
     border-bottom-left-radius: 1px;
     border-bottom-style:solid ; 
     border-bottom-color: rgb(211, 208, 208);

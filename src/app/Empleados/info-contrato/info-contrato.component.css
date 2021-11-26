@@ -3,15 +3,14 @@
     max-width: 90%;
     width: 90%;
 }
+.logoM{
+    padding-left: 30%;  
+    border-radius: 10px; 
 
+}
 
-.logo{
-
-    border-radius: 2px;
-    margin: 5px;
-    padding: 5px;
-    justify-content:center;
- 
+.empleados{
+    min-width: 1000px;
 }
 .encabezado{
     margin: 0.2cm;
@@ -38,20 +37,35 @@
     padding: 0.5%;
 
 }
+.edit{
+    width:20px;
+    height: 20px;
+}
+svg#icono-tabla{
+    width:40px;
+    height: 30px;
+    color: green;
+}
 .finContrato{
     margin: 0.5%;
     padding: 0.5%;
 }
+.finContrato1{
+    margin-left: 1.8%;
+}
 .codContrato{
     margin: 0.5%;
     padding: 0.5%;
+}
+.codContrato1{
+ margin-left: 3.8%;
 }
 .info{
     float: right;
     margin: 0.2cm;
     padding: 0.2cm;
     border: 0.2cm;
-    width: 80%;
+    width: 78%;
     border-bottom: 1px;
     border-bottom-left-radius: 1px;
     border-bottom-style:solid ; 
@@ -65,4 +79,19 @@
     border-left-color: rgb(211, 208, 208);
     border-left-style: solid;
     border-left-width: 1px;
+}
+.text{
+    margin-left: 20%;
+}
+.fechaI{
+    margin: 0.5%;
+    padding: 0.5%;
+}
+.fechaF{
+    margin: 0.5%;
+    padding: 0.5%;
+}
+.codigo{
+    margin: 0.5%;
+    padding: 0.5%;
 }
