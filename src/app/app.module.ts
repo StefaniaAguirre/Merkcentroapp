@@ -16,6 +16,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ComposeComponent } from './Empleados/crearEmpleado/compose.component';
 // import { MatFormFieldModule } from '@angular/material/form-field';
 
+import {FullCalendarModule} from 'primeng/fullcalendar';
+
+
+
 const routerConfig: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   preloadingStrategy       : PreloadAllModules
@@ -42,6 +46,7 @@ const routerConfig: ExtraOptions = {
     AppRoutingModule,
     RouterModule,
     MatDialogModule,
+    FullCalendarModule,
     // MatFormFieldModule,
     // Input
     // RouterModule.forRoot(appRoutes, routerConfig),
