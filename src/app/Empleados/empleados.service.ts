@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { empleado } from './empleados.types';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { BehaviorSubject, Observable, of } from 'rxjs';
+import { BehaviorSubject, Observable, of, throwError } from 'rxjs';
 import { map, switchMap, tap, take } from 'rxjs/operators';
 import { __values } from 'tslib';
 import { cloneDeep, result } from 'lodash';
@@ -12,13 +12,15 @@ import { cloneDeep, result } from 'lodash';
 })
 export class EmpleadosService {
 
-  private _empleados: BehaviorSubject<empleado[]> = new BehaviorSubject<empleado[]>([]);
-  private _empleado: BehaviorSubject<empleado | null > = new BehaviorSubject<empleado | null >(null);
 
-  constructor(private db: AngularFirestore) {
-    
+  private _empleados: BehaviorSubject<empleado[]> = new BehaviorSubject<empleado[]>([]);
+  private _empleado: BehaviorSubject<empleado | null> = new BehaviorSubject<empleado | null>(null);
+  private _empleadosById:BehaviorSubject<empleado[] | null> = new BehaviorSubject<empleado[] | null>(null);
+
+  constructor(private db: AngularFirestore    ) {
+
   }
-  
+
 
   /**
    * 
@@ -38,7 +40,7 @@ export class EmpleadosService {
     var activo: boolean = true;
     console.log(nombre, apellidos, barrio, edad, cargo, direccion, identificacion, telefono, activo)
     return this.db.collection('empleados').add({ nombre, apellidos, barrio, edad, cargo, direccion, identificacion, telefono, activo }).then(results => {
-  
+
       console.log(results);
     });
   }
@@ -92,35 +94,61 @@ export class EmpleadosService {
     });
 
   }
+  /**
+     * Get the order by its ID
+     * @param id order
+     * @returns the order
+     */
+  getEmpleadoById(id: string): Observable<empleado> {
+    console.log(id);
+    return this._empleados.pipe(take(1), map((empleados) => {
+
+        // Find the order
+        const empleado = empleados.find(item => item.id === id) || null;
+
+        // Update the order
+        this._empleado.next(empleado);
+
+        // Return the order
+        return empleado;
+      }),
+      switchMap((empleado) => {
+
+        if (!empleado) {
+          return throwError('Could not found empleado with id of ' + id + '!');
+        }
+
+        return of(empleado);
+      }));
+  }
 
   /**
      * buscar empleados por medio del query
      *
      * @param query
      */
-   searchEmpleados(query: string): Observable<empleado[]>
-   {
-     console.log("query", query);
-       // Clone the products
-       let empleados: empleado[];
-       return this.getEmpleados().pipe(
-           switchMap((results:empleado[]) => {
-              empleados = cloneDeep(results);
-               // Filter the products
-               empleados = empleados.filter(empleado => 
-                empleado.nombre && empleado.nombre.toLowerCase().includes(query.toLowerCase())  || 
-                empleado.barrio && empleado.barrio.toLowerCase().includes(query.toLowerCase()) || 
-                empleado.identificacion && empleado.identificacion.toLowerCase().includes(query.toLowerCase()) ||
-                empleado.cargo && empleado.cargo.toLowerCase().includes(query.toLowerCase()) ||
-                empleado.telefono && empleado.telefono.toLowerCase().includes(query.toLowerCase())
-              
-               );
-               // Sort the products by the name field by default
-               empleados.sort((a, b) => a.nombre.localeCompare(b.nombre));
-               this._empleados.next(empleados);
-                console.log("resultado:", empleados)
-               return of(empleados);
-           })
-       );
-   }
+  searchEmpleados(query: string): Observable<empleado[]> {
+    console.log("query", query);
+    // Clone the products
+    let empleados: empleado[];
+    return this.getEmpleados().pipe(
+      switchMap((results: empleado[]) => {
+        empleados = cloneDeep(results);
+        // Filter the products
+        empleados = empleados.filter(empleado =>
+          empleado.nombre && empleado.nombre.toLowerCase().includes(query.toLowerCase()) ||
+          empleado.barrio && empleado.barrio.toLowerCase().includes(query.toLowerCase()) ||
+          empleado.identificacion && empleado.identificacion.toLowerCase().includes(query.toLowerCase()) ||
+          empleado.cargo && empleado.cargo.toLowerCase().includes(query.toLowerCase()) ||
+          empleado.telefono && empleado.telefono.toLowerCase().includes(query.toLowerCase())
+
+        );
+        // Sort the products by the name field by default
+        empleados.sort((a, b) => a.nombre.localeCompare(b.nombre));
+        this._empleados.next(empleados);
+        console.log("resultado:", empleados)
+        return of(empleados);
+      })
+    );
+  }
 }

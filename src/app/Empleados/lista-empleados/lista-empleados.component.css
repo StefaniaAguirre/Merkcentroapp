@@ -18,6 +18,14 @@
         min-width: 1100px;
          
     }
+    .buscador{
+        margin-left:50px ;
+        width: 50%;
+        align-items: center;
+        padding-left:10% ;
+        height: 15px; 
+        border-color: grey;
+    }
     .tabla-Empleados{
         margin: 0.2cm;
         padding: 0.2cm;
