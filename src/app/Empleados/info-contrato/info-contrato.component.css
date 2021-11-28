@@ -8,6 +8,17 @@
     border-radius: 10px; 
 
 }
+.cargarImagen, .guardar{
+    margin: 1%;
+    height: 30px;
+    width: 18%;
+   text-align: center;
+   background-color: rgb(222, 222, 245);
+}
+
+.cargarImagen:hover, .guardar:hover{
+background-color: #06976070 ;
+}
 
 .empleados{
     min-width: 1000px;

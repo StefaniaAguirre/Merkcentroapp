@@ -38,9 +38,9 @@ export class ListaEmpleadosComponent implements OnInit {
     this._empleadosService.empleado$.subscribe(result => this.empleadoSeleccionado = result);
 
     // Get the empleados
-    this._empleadosService.getEmpleados().pipe(takeUntil(this._unsubscribeAll)).subscribe(results => {
-      this.listEmpleados = results;
-    });
+    // this._empleadosService.getEmpleados().pipe(takeUntil(this._unsubscribeAll)).subscribe(results => {
+    //   this.listEmpleados = results;
+    // });
 
     
     console.log(this.searchInputControl.setValue);
