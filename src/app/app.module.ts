@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DiariosComponent } from './diarios/diarios.component';
 import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ProfilesComponent } from './profiles/profiles.component';
@@ -23,8 +24,9 @@ import { environment } from 'src/environments/environment';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
-
+import { MatInputModule } from '@angular/material/input';
 
 const routerConfig: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -61,7 +63,10 @@ const routerConfig: ExtraOptions = {
     NgxPaginationModule,
     MatPaginatorModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule,
+    MatInputModule
     // MatFormFieldModule,
     // Input
     // RouterModule.forRoot(appRoutes, routerConfig),

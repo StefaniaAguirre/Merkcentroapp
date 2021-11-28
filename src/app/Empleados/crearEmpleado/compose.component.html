@@ -1,63 +1,87 @@
 <section class="empleados">
-  <html>
-  <body>
-      <div>
-      <div class="pant">
-        <div class="encabezado">
-            <img class="logoM" src="assets/images/merkcentro.PNG">
+    <html>
+
+    <body>
+        <div>
+            <div class="pant">
+                <div class="encabezado">
+                    <img class="logoM" src="assets/images/merkcentro.PNG">
+                </div>
+                <a class="edit" [routerLink]="['/empleados']">
+                    <svg id="icono-tabla" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"></path>
+                    </svg>
+
+                </a>
+                <div class="titulo">
+                    <h1> Informacion personal</h1>
+                </div>
+                <div class="info">
+                    <form class="flex-col sm:p-8 overflow-y-auto flex-align" [formGroup]="EmpleadoForm"
+                        #userNgForm="ngForm">
+
+                        <div class="n1">
+                            <label class="nombre">Nombre: </label>
+                            <input class="lnombre" [placeholder]="'Nombre'" matInput required
+                                formControlName="nombre">
+                        </div>
+
+                        <div class="n2">
+                            <label class="apellidos">Apellidos: </label>
+                            <input class="lapellidos" [placeholder]="'apellidos'" matInput required
+                                formControlName="apellidos">
+                        </div>
+
+                        <div class="n3">
+                            <label class="identificacion">identificación:</label>
+                            <input class="lidentificacion" [placeholder]="'identificacion'" matInput required
+                                formControlName="identificacion">
+                        </div>
+
+                        <div class="n4">
+                            <label class="direccion">Dirección:</label>
+                            <input class="ldireccion" [placeholder]="'direccion'" matInput required
+                            formControlName="direccion">
+                        </div>
+
+                        <div class="n5">
+                            <label class="barrio"> Barrio:</label>
+                            <input class="lbarrio" [placeholder]="'barrio'" matInput required
+                            formControlName="barrio">
+                        </div>
+
+                        <div class="n6">
+                            <label class="telefono">Telefono: </label>
+                            <input class="ltelefono" [placeholder]="'telefono'" matInput required
+                            formControlName="telefono">
+                        </div>
+
+                        <div class="n7">
+                            <label class="edad">Edad:</label>
+                            <input class="ledad"  [placeholder]="'edad'" matInput required
+                            formControlName="edad">
+                        </div>
+
+                        <div class="n8">
+                            <label class="cargo">Cargo:</label>
+                            <input class="lcargo" [placeholder]="'cargo'" matInput required
+                            formControlName="cargo">
+                        </div>
+
+                        <div class="n9">
+                            <button class="boton" (click)="crearUsuario()">Crear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <app-profiles></app-profiles>
+
         </div>
-        <a class="edit" [routerLink]="['/empleados']" >
-            <svg id= "icono-tabla" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
-            xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" 
-            stroke-linejoin="round" stroke-width="2" 
-            d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"></path></svg>
-          </a>
-           <div class="titulo">
-              <h1> Informacion personal</h1>
-          </div>
-          <div class="info">
-              
-                  <div class="n1">
-                      <label class="nombre">Nombre Completo: </label>
-                      <input type="text" class="lnombre">
-                  </div>
-                  
-              <div class="n2">
-                  <label class="cedula">Cedula:</label>
-                  <input type="text" class="lcedula">
-              </div>
-              
-              <div class="n3">
-                  <label class="nacimiento">Fecha de nacimiento:</label>
-                  <input type="text" class="lnacimiento">
-              </div>
-              <div class="n4">
-                  <label class="direccion">Direccion:</label>
-                  <input type="text" class="ldireccion">
-              </div>
-              <div class="n5">
-                  <label class="telefono">Telefono: </label>
-                  <input type="text" class="ltelefono">
-              </div>
-              <div class="n6">
-                  <label class="correo">Correo:</label>
-                  <input type="text" class="lcorreo">
-              </div>
-              <div class="n7">
-                  <label class="descripcion">Descripcion del cargo:</label>
-                  <input type="text" class="ldescripcion">
-              </div>
-              <div class="n8">
-                  <button class="boton">Crear</button>
-              </div>
-             
-          </div>
-      </div>
+    </body>
 
-
-<app-profiles></app-profiles>
-
-    </div>
-  </body>
-  </html>
+    </html>
 </section>

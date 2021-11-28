@@ -27,23 +27,19 @@ export class EmpleadosService {
    * @returns 
    */
   crearEmpleado(empleadoForm: any): Promise<any> {
-    var nombre: string = empleadoForm.name;
-    var apellidos: string = empleadoForm.date;
-    var barrio: string = empleadoForm.idProvider;
+    var nombre: string = empleadoForm.nombre;
+    var apellidos: string = empleadoForm.apellidos;
+    var barrio: string = empleadoForm.barrio;
     var edad: number = empleadoForm.edad;
     var cargo: string = empleadoForm.cargo;
     var direccion: string = empleadoForm.direccion;
     var identificacion: string = empleadoForm.identificacion;
     var telefono: string = empleadoForm.telefono;
-    var activo: boolean = empleadoForm.activo;
+    var activo: boolean = true;
+    console.log(nombre, apellidos, barrio, edad, cargo, direccion, identificacion, telefono, activo)
     return this.db.collection('empleados').add({ nombre, apellidos, barrio, edad, cargo, direccion, identificacion, telefono, activo }).then(results => {
-      // for (const product of addProduct) 
-      // {
-      //     results.collection('Products').add(product);
-      //     var productQuantity: number = Number(product.quantityStock);
-
-      //     this.updateProduct(product.idCategory, product.idProduct, productQuantity);
-      // }
+  
+      console.log(results);
     });
   }
 
@@ -104,6 +100,7 @@ export class EmpleadosService {
      */
    searchEmpleados(query: string): Observable<empleado[]>
    {
+     console.log("query", query);
        // Clone the products
        let empleados: empleado[];
        return this.getEmpleados().pipe(
@@ -121,6 +118,7 @@ export class EmpleadosService {
                // Sort the products by the name field by default
                empleados.sort((a, b) => a.nombre.localeCompare(b.nombre));
                this._empleados.next(empleados);
+                console.log("resultado:", empleados)
                return of(empleados);
            })
        );

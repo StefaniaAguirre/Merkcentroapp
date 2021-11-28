@@ -165,49 +165,69 @@ svg#icono-tabla{
     height: 20%;
 }
 .n8{
+    margin: 0.2cm;
+    padding: 0.2cm;
+    border: 0.2cm;
+    justify-content:center;
+    width:100%; 
+    height: 20%;
+}
+.n9{
     padding-left:40% ;
 }
 .lnombre{
-    margin-left:22px ;
+    margin-left:50px ;
     width: 50%;
+    align-items: center;
     padding-left:10% ;
-    height: 20px;
-    height: 20px; 
+    height: 15px;
 }
-.lcedula{
-    margin-left:101px ;
+.lapellidos{
+    margin-left:50px ;
     width: 50%;
+    align-items: center;
     padding-left:10% ;
-    height: 20px; 
+    height: 15px;
 }
-.lnacimiento{
-    margin-left:14px ;
+.lidentificacion{
+    margin-left:50px ;
     width: 50%;
+    align-items: center;
     padding-left:10% ;
-    height: 20px; 
+    height: 15px; 
+}
+.ledad{
+    margin-left:50px ;
+    width: 50%;
+    align-items: center;
+    padding-left:10% ;
+    height: 15px; 
 }
 .ldireccion{
-    margin-left:82px ;
+    margin-left:50px ;
     width: 50%;
+    align-items: center;
     padding-left:10% ;
-    height: 20px; 
+    height: 15px; 
 }
 .ltelefono{
-    margin-left:85px ;
+    margin-left:50px ;
     width: 50%;
+    align-items: center;
     padding-left:10% ;
-    height: 20px; 
+    height: 15px; 
 }
-.lcorreo{
-    margin-left:100px ;
+.lbarrio{
+    margin-left:50px ;
     width: 50%;
+    align-items: center;
     padding-left:10% ;
-    height: 20px; 
+    height: 15px; 
 }
-.ldescripcion{
-    margin-left:4px ;
+.lcargo{
+    margin-left:50px ;
     width: 50%;
+    align-items: center;
     padding-left:10% ;
-    height: 35px; 
-     
+    height: 15px; 
 }
