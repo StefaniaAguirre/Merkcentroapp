@@ -26,7 +26,8 @@
         height: 15px; 
         border-color: grey;
     }
-    .tabla-Empleados{
+    
+    .tabla-Empleados,.botonB{
         margin: 0.2cm;
         padding: 0.2cm;
         border: 0.2cm;
@@ -43,25 +44,6 @@
         border-left-color: rgb(211, 208, 208);
         border-left-style: solid;
         border-left-width: 1px;
-    }
-    .botonB{
-        margin: 0.2cm;
-        padding: 0.2cm;
-        border: 0.2cm;
-    justify-content:center;
-    border-bottom: 1px;
-    border-bottom-left-radius: 1px;
-    border-bottom-style:solid ; 
-    border-bottom-color: rgb(211, 208, 208);
-    border-top-color: rgb(211, 208, 208);
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-right-color: rgb(211, 208, 208);
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-left-color: rgb(211, 208, 208);
-    border-left-style: solid;
-    border-left-width: 1px;
     }
     .logoM{
         padding-left: 30%; 
@@ -132,59 +114,21 @@
        text-align: center;
        background-color: rgb(222, 222, 245);
     }
-    .bbuscar{
+    .bbuscar,.bcrear{
         width: 50%;
     }
     .cuerpo .botonB .bbuscar #buscador{
         width:70%;
     }
-    .bcrear{
-        width: 50%;
-    }
 
-    .cedula{
+    .cedula, .nombre{
         margin: 0.5%;
         padding: 0.5%;
     }
-
-    .nombre{
-        margin: 0.5%;
-        padding: 0.5%;
-    }
-    
-    .botonCrear{
-        margin: 1%;
-        height: 30px;
-        width: 15%;
-       text-align: center;
-       background-color: rgb(222, 222, 245);
-    }
-    
-    .botonSelecionar:hover{
+    .boton1:hover,.boton2:hover,.botonCrear:hover,.botonSelecionar:hover,.botonBuscar:hover  {
         background-color: #06976070 ;
     }
-    
-    .botonBuscar:hover{
-        background-color:#06976070; ;
-    }
-
-    .botonCrear:hover{
-        background-color: #06976070 ;
-    }
-    .boton1:hover{
-        background-color: #06976070 ;
-    }
-    .boton2:hover{
-        background-color: #06976070 ;
-    }
-    .boton1{
-        margin: 1%;
-        height: 30px;
-        width: 15%;
-       text-align: center;
-       background-color: rgb(222, 222, 245);
-    }
-    .boton2{
+    .boton2, .boton1, .botonCrear{
         margin: 1%;
         height: 30px;
         width: 15%;
