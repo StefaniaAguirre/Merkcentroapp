@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subject, takeUntil } from 'rxjs';
 import { EmpleadosService } from '../empleados.service';
@@ -18,6 +18,7 @@ export class InfoPersonalComponent implements OnInit {
     direccion: "", edad: 0,
     identificacion: "", nombre: "", telefono: "" }
   empleadoSeleccionado: empleado | null  = this.empleado;
+  EmpleadoForm: FormGroup = new FormGroup({});
   private _unsubscribeAll: Subject<any> = new Subject<any>();
   empleados$: Observable<empleado[]> = new Observable<empleado[]>();
   public page: number = 0;
@@ -26,7 +27,8 @@ export class InfoPersonalComponent implements OnInit {
   constructor(
     private _empleadosService: EmpleadosService,
     private _changeDetectorRef: ChangeDetectorRef,
-    public router:ActivatedRoute
+    public router:ActivatedRoute,
+    private _formBuilder: FormBuilder,
   ) {
 
   }
@@ -51,12 +53,27 @@ export class InfoPersonalComponent implements OnInit {
          // Mark for check
          this._changeDetectorRef.markForCheck();
      });
+      // Crear el form de empleado
+    this.EmpleadoForm = this._formBuilder.group({
+      nombre: ['', [Validators.required]],
+      apellidos: ['', [Validators.required]],
+      barrio: ['', Validators.required],
+      cargo: ['', Validators.required],
+      edad: ['', Validators.required],
+      id: [''],
+      identificacion: ['', Validators.required],
+      telefono: ['', Validators.required],
+      activo: [''],
+      direccion: ['', Validators.required]
+
+    });
 
 
 
+  }
 
-
-
+  editarUsuario(){
+    console.log(this.empleadoSeleccionado)
   }
 
 }
