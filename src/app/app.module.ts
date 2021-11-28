@@ -17,7 +17,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ProfilesComponent } from './profiles/profiles.component';
 import { ComposeComponent } from './Empleados/crearEmpleado/compose.component';
 import { EmpleadosService } from './Empleados/empleados.service';
-import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireModule } from '@angular/fire/compat' ;
 import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment';
@@ -27,6 +27,8 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { MatInputModule } from '@angular/material/input';
+import { FullCalendarModule} from 'primeng/fullcalendar';
+
 
 const routerConfig: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
@@ -66,7 +68,8 @@ const routerConfig: ExtraOptions = {
     ReactiveFormsModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    FullCalendarModule
     // MatFormFieldModule,
     // Input
     // RouterModule.forRoot(appRoutes, routerConfig),
