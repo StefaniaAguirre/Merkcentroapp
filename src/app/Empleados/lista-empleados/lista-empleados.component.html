@@ -10,10 +10,11 @@
                 <div class="botonB">
 
                     <div class="bbuscar">
-                        <mat-form-field class="fuse-mat-dense fuse-mat-no-subscript w-full min-w-40">
+                        <mat-form-field class="flex justify-between w-full">
                             <!-- <mat-icon class="icon-size-5" matPrefix [svgIcon]="'heroicons_solid:search'">
                             </mat-icon> -->
-                        <input matInput [formControl]="searchInputControl" [placeholder]="'Buscar empleados'"
+                            <p> Buscar Empleados</p>
+                        <input class= "buscador" [placeholder]="''" matInput [formControl]="searchInputControl"
                             [autocomplete]="'off'">
                         <!-- <button class="botonBuscar" (click)="buscarEmpleado()"> Buscar Empleado </button> -->
                         </mat-form-field>
@@ -39,7 +40,7 @@
                                 <td>{{ empleados.identificacion }}</td>
                                 <td>{{ empleados.activo }}</td>
                                 <th>
-                                    <a [routerLink]="['/info']" class="edit">
+                                    <a [routerLink]="['/info', empleados.id]" class="edit">
                                         <svg id="icono-tabla" class="w-6 h-6" fill="none" stroke="currentColor"
                                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

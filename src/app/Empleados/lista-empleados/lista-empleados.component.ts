@@ -37,6 +37,17 @@ export class ListaEmpleadosComponent implements OnInit {
     //Empleado seleccionado
     this._empleadosService.empleado$.subscribe(result => this.empleadoSeleccionado = result);
 
+     // Get the user
+     this._empleadosService.empleado$
+     .pipe(takeUntil(this._unsubscribeAll))
+     .subscribe((result: empleado | null) => {
+
+         // Update the selected user
+         this.empleadoSeleccionado = result;
+         console.log(this.empleadoSeleccionado);
+         // Mark for check
+         this._changeDetectorRef.markForCheck();
+     });
     // Get the empleados
     this._empleadosService.getEmpleados().pipe(takeUntil(this._unsubscribeAll)).subscribe(results => {
       this.listEmpleados = results;
@@ -49,15 +60,12 @@ export class ListaEmpleadosComponent implements OnInit {
         takeUntil(this._unsubscribeAll),
         switchMap(query => 
            this._empleadosService.searchEmpleados(query)
+           
         )).subscribe();
 
+        this._changeDetectorRef.markForCheck();
   }
 
-  buscarEmpleado(){
-
-  
-        
-  }
 
 
 

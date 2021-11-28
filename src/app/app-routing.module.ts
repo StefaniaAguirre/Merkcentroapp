@@ -19,7 +19,7 @@ const routes: Routes = [
       { path: 'perfil', component: PerfilComponent},
       { path: 'horarios', component: HorariosComponent},
       { path: 'empleados', component: ListaEmpleadosComponent},
-      { path: 'info', component: InfoPersonalComponent},
+      { path: 'info/:id', component: InfoPersonalComponent},
       { path: 'permisos', component: InfoPermisosComponent},
       { path: 'contrato', component: InfoContratoComponent},
       { path: 'compose', component: ComposeComponent},
