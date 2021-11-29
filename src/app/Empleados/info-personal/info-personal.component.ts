@@ -35,9 +35,6 @@ export class InfoPersonalComponent implements OnInit {
   ) {
 
   }
-  private  num ="hola mundo cruel";
-
-  constructor() { }
   ngOnInit(): void {
 
     //obtener el empleado seleccionado

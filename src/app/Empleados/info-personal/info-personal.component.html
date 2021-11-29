@@ -17,24 +17,18 @@
                         </svg>
                     </a>
                     <h1 class="infoP"> Informacion personal</h1>
+                </div>
 
                 <div class="n6">
                     <label class="correo">Correo:</label>
                     <input type="text"   id="unu" class="lcorreo">
                 </div>
+
                 <div class="n7">
                     <label class="descripcion">Cargo:</label>
                     <input type="text" class="ldescripcion">
                 </div>
-                <div class="n8">
-                    <button class="boton">Editar</button>
-                    <button class="boton1"
-                    [routerLink]="['/contrato']" routerLinkActive="active" 
-                    >Contrato</button>
-                    <button class="boton2"
-                    [routerLink]="['/permisos']" routerLinkActive="active" 
-                    >Permisos</button>
-                </div>
+
                 
                 <div class="info">
                     <form class="flex-col sm:p-8 overflow-y-auto flex-align" [formGroup]="EmpleadoForm"
@@ -92,10 +86,16 @@
 
                         <div class="n10">
                             <button class="botonEditar" (click)="editarEmpleado()">Editar Usuario</button>
+                            <button class="botonEliminar" (click)="eliminarEmpleado()">Eliminar Usuario</button>
                         </div>
 
-                        <div class="n11">
-                            <button class="botonEliminar" (click)="eliminarEmpleado()">Eliminar Usuario</button>
+                        <div class="n8">
+                            <button class="boton1"
+                            [routerLink]="['/contrato', contrato.id]" routerLinkActive="active" 
+                            >Contrato</button>
+                            <button class="boton2"
+                            [routerLink]="['/permisos']" routerLinkActive="active" 
+                            >Permisos</button>
                         </div>
                     </form>
                 </div>
