@@ -44,26 +44,30 @@ export class ListaEmpleadosComponent implements OnInit {
 
          // Update the selected user
          this.empleadoSeleccionado = result;
-         console.log(this.empleadoSeleccionado);
          // Mark for check
          this._changeDetectorRef.markForCheck();
      });
-    // Get the empleados
-    // this._empleadosService.getEmpleados().pipe(takeUntil(this._unsubscribeAll)).subscribe(results => {
-    //   this.listEmpleados = results;
-    // });
-
     
-    console.log(this.searchInputControl.setValue);
-    this.searchInputControl.valueChanges
-      .pipe(
-        takeUntil(this._unsubscribeAll),
-        switchMap(query => 
-           this._empleadosService.searchEmpleados(query)
-           
-        )).subscribe();
+     // Get the empleados
+    this._empleadosService.getEmpleados().pipe(takeUntil(this._unsubscribeAll)).subscribe(results => {
+      this.listEmpleados = results;
+    });
 
-        this._changeDetectorRef.markForCheck();
+    this.searchInputControl.valueChanges.pipe( 
+      takeUntil(this._unsubscribeAll), 
+      switchMap(query => this._empleadosService.searchEmpleados(query))        
+      ).subscribe();
+    
+  }
+
+  buscarEmpleado(){
+
+    this.listEmpleados = [];
+    
+    this._empleadosService.searchEmpleados(this.searchInputControl.value).pipe(takeUntil(this._unsubscribeAll)).subscribe(results => {
+      this.listEmpleados = results;
+      this._changeDetectorRef.markForCheck();
+    });
   }
 
 

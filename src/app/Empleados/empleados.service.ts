@@ -15,6 +15,7 @@ export class EmpleadosService {
 
   private _empleados: BehaviorSubject<empleado[]> = new BehaviorSubject<empleado[]>([]);
   private _empleado: BehaviorSubject<empleado | null> = new BehaviorSubject<empleado | null>(null);
+  private _empleadoE: BehaviorSubject<any | null> = new BehaviorSubject(null);
   private _empleadosById:BehaviorSubject<empleado[] | null> = new BehaviorSubject<empleado[] | null>(null);
 
   constructor(private db: AngularFirestore    ) {
@@ -38,8 +39,9 @@ export class EmpleadosService {
     var identificacion: string = empleadoForm.identificacion;
     var telefono: string = empleadoForm.telefono;
     var activo: boolean = true;
+    var id:string = "";
     console.log(nombre, apellidos, barrio, edad, cargo, direccion, identificacion, telefono, activo)
-    return this.db.collection('empleados').add({ nombre, apellidos, barrio, edad, cargo, direccion, identificacion, telefono, activo }).then(results => {
+    return this.db.collection('empleados').add({ id,nombre, apellidos, barrio, edad, cargo, direccion, identificacion, telefono, activo }).then(results => {
 
       console.log(results);
     });
@@ -84,14 +86,23 @@ export class EmpleadosService {
   * actualizar Empleado
   * @param idEmpleado 
   */
-  actualizarEmpleado(idEmpleado: string) {
+  actualizarEmpleado(id: string, empleadoForm: any): Observable<any> {
 
+    console.log(id, empleadoForm);
     // llamado a la base de datos para actualizar cualquier propiedad del empleado
-    var userRefStock = this.db.collection("empleados").doc(idEmpleado);
+    var userRefStock = this.db.collection("empleados").doc(id);
     userRefStock.update({
-
-
+      activo: true,
+      apellidos: empleadoForm.apellidos,
+      barrio: empleadoForm.barrio,
+      cargo: empleadoForm.cargo,
+      direccion: empleadoForm.direccion,
+      edad: empleadoForm.edad,
+      identificacion: empleadoForm.identificacion,
+      nombre: empleadoForm.nombre,
+      telefono: empleadoForm.telefono
     });
+    return of(userRefStock);
 
   }
   /**
@@ -100,7 +111,7 @@ export class EmpleadosService {
      * @returns the order
      */
   getEmpleadoById(id: string): Observable<empleado> {
-    console.log(id);
+
     return this._empleados.pipe(take(1), map((empleados) => {
 
         // Find the order
@@ -128,7 +139,7 @@ export class EmpleadosService {
      * @param query
      */
   searchEmpleados(query: string): Observable<empleado[]> {
-    console.log("query", query);
+   
     // Clone the products
     let empleados: empleado[];
     return this.getEmpleados().pipe(
@@ -146,9 +157,22 @@ export class EmpleadosService {
         // Sort the products by the name field by default
         empleados.sort((a, b) => a.nombre.localeCompare(b.nombre));
         this._empleados.next(empleados);
-        console.log("resultado:", empleados)
         return of(empleados);
       })
     );
+  }
+
+   /**
+     * Eliminar Empleado
+     * @param idEmpleado
+     * @returns
+     */
+    eliminarEmpleado(idEmpleado:string): Observable<empleado>{
+      return this._empleadoE.pipe(
+          map((result) => {
+              this.db.collection("empleados").doc(idEmpleado).delete();
+              return result;
+          })
+      );
   }
 }

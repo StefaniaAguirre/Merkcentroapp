@@ -12,22 +12,25 @@ import { empleado } from '../empleados.types';
 })
 export class InfoPersonalComponent implements OnInit {
 
-  empleado: empleado = {id:"",
+  empleado: empleado = {
+    id: "",
     activo: true, apellidos: "",
     barrio: "", cargo: "",
     direccion: "", edad: 0,
-    identificacion: "", nombre: "", telefono: "" }
-  empleadoSeleccionado: empleado | null  = this.empleado;
+    identificacion: "", nombre: "", telefono: ""
+  }
+  empleadoSeleccionado: empleado | null = this.empleado;
   EmpleadoForm: FormGroup = new FormGroup({});
   private _unsubscribeAll: Subject<any> = new Subject<any>();
   empleados$: Observable<empleado[]> = new Observable<empleado[]>();
   public page: number = 0;
   searchInputControl: FormControl = new FormControl();
+  id:string="";
 
   constructor(
     private _empleadosService: EmpleadosService,
     private _changeDetectorRef: ChangeDetectorRef,
-    public router:ActivatedRoute,
+    public router: ActivatedRoute,
     private _formBuilder: FormBuilder,
   ) {
 
@@ -37,43 +40,54 @@ export class InfoPersonalComponent implements OnInit {
 
     //obtener el empleado seleccionado
     this._empleadosService.empleado$.pipe(takeUntil(this._unsubscribeAll)).subscribe(result => this.empleadoSeleccionado = result);
-    var id: string = this.router.snapshot.paramMap.get('id') + "";
-    
+    this.id = this.router.snapshot.paramMap.get('id') + "";
+
     // obtener la información del empleado
-     this._empleadosService.getEmpleadoById(id)
-     .pipe(takeUntil(this._unsubscribeAll))
-     .subscribe((result: empleado) => {
+    this._empleadosService.getEmpleadoById(this.id)
+      .pipe(takeUntil(this._unsubscribeAll))
+      .subscribe((result: empleado) => {
 
-         // Update the selected order
-         this.empleadoSeleccionado = result;
-          console.log(result);
-         //Load the order products
-        //  this._empleadosService.getContrato(this.empleadoSeleccionado.id).subscribe(result => this.contrato = result);
+        // Update the selected order
+        this.empleadoSeleccionado = result;
+        console.log(result);
+        this._changeDetectorRef.markForCheck();
+      });
 
-         // Mark for check
-         this._changeDetectorRef.markForCheck();
-     });
-      // Crear el form de empleado
+    // Crear el form de empleado
     this.EmpleadoForm = this._formBuilder.group({
-      nombre: ['', [Validators.required]],
-      apellidos: ['', [Validators.required]],
+      nombre: ['', Validators.required],
+      apellidos: ['', Validators.required],
       barrio: ['', Validators.required],
       cargo: ['', Validators.required],
       edad: ['', Validators.required],
-      id: [''],
+      id: ['', Validators.required],
       identificacion: ['', Validators.required],
       telefono: ['', Validators.required],
-      activo: [''],
+      activo: ['', Validators.required],
       direccion: ['', Validators.required]
 
     });
 
-
-
   }
 
-  editarUsuario(){
-    console.log(this.empleadoSeleccionado)
+  editarEmpleado(){
+
+    //llamado a empleado service para Actualizar Empleado
+    this._empleadosService.actualizarEmpleado(this.id, this.EmpleadoForm.value).pipe(takeUntil(this._unsubscribeAll))
+      .subscribe(results => { 
+        this.EmpleadoForm.enable();
+        console.log(results) });
+  }
+
+  eliminarEmpleado(){
+
+    //llamado a empleado service para eliminar
+    this._empleadosService.eliminarEmpleado(this.id)
+    .pipe(takeUntil(this._unsubscribeAll))
+    .subscribe(()=> {            
+        this._changeDetectorRef.markForCheck();
+    });
+
   }
 
 }

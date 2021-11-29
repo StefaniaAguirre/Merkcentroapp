@@ -69,7 +69,17 @@
                         </div>
 
                         <div class="n9">
-                            <button class="boton" (click)="editarUsuario()">Editar Usuario</button>
+                            <label class="activo">Activo: </label>
+                            <input class="lactivo" [placeholder]="'lactivo'" matInput required
+                                formControlName="activo">
+                        </div>
+
+                        <div class="n10">
+                            <button class="botonEditar" (click)="editarEmpleado()">Editar Usuario</button>
+                        </div>
+
+                        <div class="n11">
+                            <button class="botonEliminar" (click)="eliminarEmpleado()">Eliminar Usuario</button>
                         </div>
                     </form>
                 </div>
