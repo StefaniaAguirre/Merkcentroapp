@@ -43,7 +43,7 @@ background-color: #06976070 ;
     border-left-style: solid;
     border-left-width: 1px;
 }
-.inicioContrato{
+.inicioContrato, .finContrato, .codContrato, .fechaI, .codigo, .fechaF{
     margin: 0.5%;
     padding: 0.5%;
 
@@ -57,16 +57,8 @@ svg#icono-tabla{
     height: 30px;
     color: green;
 }
-.finContrato{
-    margin: 0.5%;
-    padding: 0.5%;
-}
 .finContrato1{
     margin-left: 1.8%;
-}
-.codContrato{
-    margin: 0.5%;
-    padding: 0.5%;
 }
 .codContrato1{
  margin-left: 3.8%;
@@ -93,16 +85,4 @@ svg#icono-tabla{
 }
 .text{
     margin-left: 20%;
-}
-.fechaI{
-    margin: 0.5%;
-    padding: 0.5%;
-}
-.fechaF{
-    margin: 0.5%;
-    padding: 0.5%;
-}
-.codigo{
-    margin: 0.5%;
-    padding: 0.5%;
 }

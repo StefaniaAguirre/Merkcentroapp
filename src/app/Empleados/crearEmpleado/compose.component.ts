@@ -14,6 +14,7 @@ export interface DialogData {
 
 
 
+
 export class ComposeComponent implements OnInit {
 
   animal: string= "";

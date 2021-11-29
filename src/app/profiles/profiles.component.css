@@ -2,7 +2,7 @@
 .contene{
   background-color:rgb(182, 178, 177);
   width: 19%;
-  height: 730px; 
+  height: 780px; 
   border-bottom: 1px;
   border-bottom-left-radius: 1px;
   border-bottom-style:solid ; 
@@ -66,29 +66,11 @@ svg#icono-tabla{
   border-left-style: solid;
   border-left-width: 1px;
 }
-.textPerfil{
+.textPerfil, .textEmpleados, .textHorarios{
   color:  black;
   font-size: 20px;
 }
-.textEmpleados{
-  color:  black;
-  font-size: 20px;
-}
-.textHorarios{
-  color: black;
-  font-size: 20px;
-}
-
-.gEmpleados{
-  margin: 0.2cm;
-  padding: 0.2cm;
-  border: 0.2cm;        
-  border-bottom: 1px;
-  border-bottom-left-radius: 1px;
-  border-bottom-style:solid ; 
-  border-bottom-color: rgb(0, 0, 0);
-}
-.gHorarios{
+.gHorarios, .gPerfil, .gEmpleados{
   color:  #006D44;
   margin: 0.2cm;
   padding: 0.2cm;
@@ -98,22 +80,6 @@ svg#icono-tabla{
   border-bottom-style:solid ; 
   border-bottom-color: rgb(0, 0, 0);
 }
-.gPerfil{
-  color:  #006D44;
-  margin: 0.2cm;
-  padding: 0.2cm;
-  border: 0.2cm;
-  border-bottom: 1px;
-  border-bottom-left-radius: 1px;
-  border-bottom-style:solid ; 
-  border-bottom-color: rgb(0, 0, 0);
-}
-.gPerfil :hover{
+.gPerfil :hover, .gEmpleados :hover, .gHorarios :hover{
 color: orangered;
-}
-.gEmpleados :hover{
-  color: orangered;
-}
-.gHorarios :hover{
-  color: orangered;
 }

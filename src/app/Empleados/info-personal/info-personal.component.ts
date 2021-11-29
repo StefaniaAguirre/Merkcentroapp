@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoPersonalComponent implements OnInit {
 
-  constructor() { }
+  private  num ="hola mundo cruel";
 
+  constructor() { }
   ngOnInit(): void {
   }
 
