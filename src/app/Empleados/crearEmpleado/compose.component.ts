@@ -53,14 +53,14 @@ export class ComposeComponent implements OnInit {
     this.EmpleadoForm.disable();
     console.log("Ingresó")
     console.log(this.EmpleadoForm.value)
-    // this._empleadosService.crearEmpleado(this.EmpleadoForm.value).then(result => {
-    //   // Re-enable el form
-    //   this.EmpleadoForm.enable();
+    this._empleadosService.crearEmpleado(this.EmpleadoForm.value).then(result => {
+      // Re-enable el form
+      this.EmpleadoForm.enable();
 
-    //   // Reset el form
-    //   this.EmpleadoForm.reset();
+      // Reset el form
+      this.EmpleadoForm.reset();
 
-    // })
+    })
 
   }
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { empleado } from './empleados.types';
+import { contrato, empleado } from './empleados.types';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { BehaviorSubject, Observable, of, throwError } from 'rxjs';
 import { map, switchMap, tap, take } from 'rxjs/operators';
@@ -40,9 +40,17 @@ export class EmpleadosService {
     var telefono: string = empleadoForm.telefono;
     var activo: boolean = true;
     var id:string = "";
-    console.log(nombre, apellidos, barrio, edad, cargo, direccion, identificacion, telefono, activo)
     return this.db.collection('empleados').add({ id,nombre, apellidos, barrio, edad, cargo, direccion, identificacion, telefono, activo }).then(results => {
+      console.log(results);
+    });
+  }
 
+  crearContrato(contratoForm: any, idEmpleado:string): Promise<any>{
+    var fechaI:string = contratoForm.fechaI;
+    var fechaF:string = contratoForm.fechaF;
+    var imagen:string = contratoForm.imagen;
+    var id:string="";
+    return this.db.doc('empleados/' + idEmpleado).collection('contrato').add({fechaI, fechaF, imagen, id}).then(results => {
       console.log(results);
     });
   }
@@ -81,6 +89,8 @@ export class EmpleadosService {
       })
     );
   }
+
+
 
   /**
   * actualizar Empleado
