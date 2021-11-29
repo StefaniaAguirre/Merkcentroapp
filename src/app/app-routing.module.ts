@@ -21,7 +21,7 @@ const routes: Routes = [
       { path: 'empleados', component: ListaEmpleadosComponent},
       { path: 'info/:id', component: InfoPersonalComponent},
       { path: 'permisos', component: InfoPermisosComponent},
-      { path: 'contrato/:id', component: InfoContratoComponent},
+      { path: 'contrato', component: InfoContratoComponent},
       { path: 'compose', component: ComposeComponent},
       { path:  'diarios', component: DiariosComponent},
       { path: 'profile' , component: ProfilesComponent},

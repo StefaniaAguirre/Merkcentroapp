@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { EmpleadosService } from '../empleados.service';
 
 @Component({
   selector: 'app-info-contrato',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoContratoComponent implements OnInit {
 
-  constructor() { }
+  contratoForm: FormGroup = new FormGroup({});
+  idEmpleado:string = "";
+  constructor(
+    private _empleadosService: EmpleadosService,
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  crearContrato(){
+    this._empleadosService.crearContrato(this.contratoForm.value, this.idEmpleado).then(result => {
+      // Re-enable el form
+      this.contratoForm.enable();
+
+      // Reset el form
+      this.contratoForm.reset();
+
+    })
   }
 
 }

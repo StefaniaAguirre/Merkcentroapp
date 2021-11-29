@@ -1,52 +1,55 @@
 <section class="empleados">
     <html>
 
-    <body>   
-    <div>    
-         
-        <div class="info">
-            <div class="encabezado">
-                <img class="logoM" src="assets/images/merkcentro.PNG">
+    <body>
+        <div>
+
+            <div class="info">
+                <div class="encabezado">
+                    <img class="logoM" src="assets/images/merkcentro.PNG">
+                </div>
+                <a class="edit" [routerLink]="['/empleados']">
+                    <svg id="icono-tabla" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"></path>
+                    </svg>
+                </a>
+                <form class="flex-col sm:p-8 overflow-y-auto flex-align" [formGroup]="contratoForm"
+                    #userNgForm="ngForm">
+                    <div class="text">
+                        <div class="fechaI">
+                            <label class="inicioContrato">Fecha Inicio del contrato</label>
+                            <input type="text" class="inicioContrato1">
+                        </div>
+                        <div class="fechaF">
+                            <label class="finContrato">Fecha Fin del contrato</label>
+                            <input type="text" class="finContrato1">
+                        </div>
+                        <div class="codigo">
+                            <label class="codContrato">Codigo del contrato</label>
+                            <input type="text" class="codContrato1">
+                        </div>
+                        <div class="bot">
+                            <button class="cargarImagen" [routerLink]="['/permisos']" routerLinkActive="active">Cargar
+                                imagen</button>
+                            <button class="guardar" [routerLink]="['/permisos']" routerLinkActive="active"
+                                (click)="crearContrato()">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+
             </div>
-            <a class="edit" [routerLink]="['/empleados']" >
-                <svg id= "icono-tabla" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" 
-                xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" 
-                stroke-linejoin="round" stroke-width="2" 
-                d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"></path></svg>
-              </a>
-        <div class="text">
-            <div class="fechaI">
-                <label class="inicioContrato">Fecha Inicio del contrato</label>
-                <input type="text" class="inicioContrato1">
+            <div class="s">
+                <img class="contrato" src="assets/images/Contrato.PNG">
             </div>
-           <div class="fechaF">
-            <label class="finContrato">Fecha Fin del contrato</label>
-            <input type="text" class="finContrato1">
-           </div>
-           <div class="codigo">
-            <label class="codContrato">Codigo del contrato</label>
-            <input type="text" class="codContrato1">
-           </div>
-           <div class="bot">
-            <button class="cargarImagen"
-            [routerLink]="['/permisos']" routerLinkActive="active" 
-            >Cargar imagen</button>
-            <button class="guardar"
-            [routerLink]="['/permisos']" routerLinkActive="active" 
-            >Guardar</button>
-           </div>
-          
-        </div>
-        <div class="s">
-            <img class="contrato" src="assets/images/Contrato.PNG">
-        </div>
         </div>
 
 
         <app-profiles></app-profiles>
-        
 
-    </div>
+
     </body>
+
     </html>
 </section>
