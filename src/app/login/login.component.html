@@ -1,32 +1,31 @@
 <section class="login  p-fixed d-flex text-center bg-primary common-img-bg">
-    <div class="auth-fluid">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="login-card card-body auth-body">
-            <form class="md-float-material">
-              <div class="text-center">
+  <div class="auth-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="login-card card-body auth-body">
+          <form class="md-float-material">
+            <div class="text-center">
+            </div>
+            <div class="auth-box">
+              <div class="row m-b-20">
+                <div class="encabezado">
+                  <img class="logo" src="assets/images/merkcentro.PNG">
+                </div>
+                <div class="col-md-12">
+                  <h3 class="text-left txt-primary">Ingreso</h3>
+                </div>
               </div>
-              <div class="auth-box">
-                <div class="row m-b-20">
-                  <div class= "encabezado">
-                  <img
-                  class = "logo"
-                  src= "assets/images/merkcentro.PNG"
-                  >
-                </div>
-                  <div class="col-md-12">
-                    <h3 class="text-left txt-primary">Ingreso</h3>
-                  </div>
-                </div>
-                <hr class= "linea"/>
+              <form class="flex-col sm:p-8 overflow-y-auto flex-align" [formGroup]="loginForm" #userNgForm="ngForm">
+                <hr class="linea" />
                 <div class="input-group">
-                  <input type="email" class="form-control" placeholder="Correo">
+                  <input type="email" class="form-control" placeholder="Correo" formControlName="correo">
                   <span class="md-line"></span>
                 </div>
                 <div class="input-group">
-                  <input type="password" class="form-control" placeholder="Contraseña">
+                  <input type="password" class="form-control" placeholder="Contraseña" formControlName="contrasena">
                   <span class="md-line"></span>
                 </div>
+
                 <div class="row m-t-25 text-left">
                   <div class="col-sm-7 col-xs-12">
                     <div class="checkbox-fade fade-in-primary">
@@ -38,28 +37,27 @@
                     </div>
                   </div>
                   <div class="col-sm-5 col-xs-12 forgot-phone text-right">
-                    <a  class="text-right f-w-600 text-inverse"> ¿Olvidaste tu contraseña?</a>
+                    <a class="text-right f-w-600 text-inverse"> ¿Olvidaste tu contraseña?</a>
                   </div>
                 </div>
                 <div class="row m-t-30">
                   <div class="col-md-12">
-                    <button type="button" 
-                    class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20"
-                    [routerLink]="['/profile']" 
-                    routerLinkActive="active" >Ingresar</button>
+                    <button type="button" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20"
+                      [routerLink]="['/empleados']" routerLinkActive="active" (click)="onLogin()">Ingresar</button>
                   </div>
                 </div>
-                <hr class= "linea"/>
+                <hr class="linea" />
                 <div class="row">
                   <div class="col-md-10">
                     <p class="text-inverse text-left m-b-0">Bienvenido a Merkcentro.</p>
                     <p class="text-inverse text-left"><b>Equipo de Autenticación</b></p>
                   </div>
                 </div>
-              </div>
-            </form>
-          </div>
+              </form>
+            </div>
+          </form>
         </div>
       </div>
     </div>
+  </div>
 </section>
