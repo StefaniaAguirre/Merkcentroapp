@@ -49,15 +49,15 @@ export class ListaEmpleadosComponent implements OnInit {
      });
     
      // Get the empleados
-    this._empleadosService.getEmpleados().pipe(takeUntil(this._unsubscribeAll)).subscribe(results => {
-      this.listEmpleados = results;
-    });
+    // this._empleadosService.getEmpleados().pipe(takeUntil(this._unsubscribeAll)).subscribe(results => {
+    //   this.listEmpleados = results;
+    // });
 
     this.searchInputControl.valueChanges.pipe( 
       takeUntil(this._unsubscribeAll), 
       switchMap(query => this._empleadosService.searchEmpleados(query))        
       ).subscribe();
-    
+
   }
 
   buscarEmpleado(){

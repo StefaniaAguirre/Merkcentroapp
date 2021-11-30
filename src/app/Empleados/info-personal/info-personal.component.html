@@ -19,6 +19,14 @@
                     <h1 class="infoP"> Informacion personal</h1>
                 </div>
 
+                <div class="n11">
+                    <button class="boton1"
+                    [routerLink]="['/contrato']" routerLinkActive="active" 
+                    >Contrato</button>
+                    <button class="boton2"
+                    [routerLink]="['/permisos']" routerLinkActive="active" 
+                    >Permisos</button>
+                </div>
                 <div class="info">
                     <form class="flex-col sm:p-8 overflow-y-auto flex-align" [formGroup]="EmpleadoForm"
                         #userNgForm="ngForm">
@@ -80,14 +88,7 @@
 
                     </form>
                 </div>
-                <div class="n8">
-                    <button class="boton1"
-                    [routerLink]="['/contrato']" routerLinkActive="active" 
-                    >Contrato</button>
-                    <button class="boton2"
-                    [routerLink]="['/permisos']" routerLinkActive="active" 
-                    >Permisos</button>
-                </div>
+                
             </div>
             <app-profiles></app-profiles>
         </div>

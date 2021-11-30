@@ -36,17 +36,6 @@ svg#icono-tabla{
     border-left-width: 1px;
     min-width: 600px;
     }
-    .boton, .boton1, .boton2 {
-    padding: 1%;
-    margin: 1%;
-    height: 1%;
-    width: 14%;
-    margin-left: 15%;
-    background-color: rgb(222, 222, 245);
-    }
-    .boton:hover, .boton1:hover, .boton2:hover{
-        background-color: #06976070 ;
-    }
 .logoM{
     padding-left: 30%;   
 }
@@ -94,7 +83,7 @@ svg#icono-tabla{
 }
 
 
-.n1, .n2, .n3, .n4, .n5, .n6, .n7{
+.n1, .n2, .n3, .n4, .n5, .n6, .n7, .n8, .n9, .n10{
     margin: 0.2cm;
         padding: 0.2cm;
         border: 0.2cm;
@@ -106,48 +95,80 @@ svg#icono-tabla{
 }
 
 .lnombre{
-    margin-left:22px ;
+    margin-left:41px ;
     width: 50%;
     padding-left:10% ;
     height: 20px;
     height: 20px; 
 }
-.lcedula{
-    margin-left:101px ;
+.lapellidos{
+    margin-left:31px ;
     width: 50%;
     padding-left:10% ;
     height: 20px; 
 }
-.lnacimiento{
-    margin-left:14px ;
+.lidentificacion{
+    margin-left:9px ;
     width: 50%;
     padding-left:10% ;
     height: 20px; 
 }
 .ldireccion{
-    margin-left:82px ;
+    margin-left:34px ;
+    width: 50%;
+    padding-left:10% ;
+    height: 20px; 
+}
+.lbarrio{
+    margin-left:56px ;
     width: 50%;
     padding-left:10% ;
     height: 20px; 
 }
 .ltelefono{
-    margin-left:85px ;
+    margin-left:37px ;
     width: 50%;
     padding-left:10% ;
     height: 20px; 
 }
-.lcorreo{
-    margin-left:100px ;
+.ledad{
+    margin-left:64px ;
     width: 50%;
     padding-left:10% ;
     height: 20px; 
-}
-.ldescripcion{
-    margin-left:4px ;
-    width: 50%;
-    padding-left:10% ;
-    height: 35px; 
      
 }
+.lcargo{
+    margin-left:59px ;
+    width: 50%;
+    padding-left:10% ;
+    height: 20px; 
+}
+.lactivo{
+    margin-left:50px ;
+    width: 50%;
+    padding-left:10% ;
+    height: 20px; 
+}
+.n10{
+    margin-left: 30%;
+}
+.n11{
+    float: right;
+    margin-left: 10%;
+}
+.n12{
+    float: left;
+    margin-right: 10%;
 
+}
+.botonEditar, .botonEliminar, .boton, .boton1, .boton2{
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(222, 222, 245);
+}
+
+    .boton:hover, .boton1:hover, .boton2:hover, botonEditar:hover, botonEliminar:hover {
+        background-color: #06976070 ;
+    }
 
